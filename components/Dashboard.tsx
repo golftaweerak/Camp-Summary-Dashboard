@@ -18,7 +18,7 @@ const Dashboard: React.FC<DashboardProps> = ({ dashboardData, onSelectDetail, on
             <header className="mb-10">
                 <div className="flex items-center gap-4 sm:gap-6">
                     <img 
-                        src="https://phromma.ac.th/main/wp-content/uploads/2019/11/logo-phromma-e1574320993339.png" 
+                        src="https://drive.google.com/thumbnail?id=1l_ValvpBYBbMBlyqApeWcgzYnPUPtAY9" 
                         alt="ตราสัญลักษณ์โรงเรียนพรหมานุสรณ์จังหวัดเพชรบุรี" 
                         className="h-20 w-20 sm:h-24 sm:w-24 object-contain"
                     />
