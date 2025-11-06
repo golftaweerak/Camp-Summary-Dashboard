@@ -18,7 +18,7 @@ const StatCard: React.FC<StatCardProps> = ({ item, onSelect }) => {
 
     return (
         <div 
-            className="bg-white p-5 rounded-xl shadow-sm border border-slate-100 flex flex-col justify-between cursor-pointer transform transition-all duration-300 ease-in-out hover:scale-[1.03] hover:shadow-lg hover:shadow-slate-200/50"
+            className="bg-white p-4 sm:p-5 rounded-xl shadow-sm border border-slate-100 flex flex-col justify-between cursor-pointer transform transition-all duration-300 ease-in-out hover:scale-[1.03] hover:shadow-lg hover:shadow-slate-200/50"
             onClick={onSelect}
             role="button"
             tabIndex={0}
@@ -27,7 +27,7 @@ const StatCard: React.FC<StatCardProps> = ({ item, onSelect }) => {
             <div className="flex justify-between items-start">
                  <div>
                     <h3 className="font-semibold text-slate-500">{item.title}</h3>
-                    <p className={`text-4xl font-bold ${getScoreTextColor(item.average)}`}>
+                    <p className={`text-3xl sm:text-4xl font-bold ${getScoreTextColor(item.average)}`}>
                         {item.average.toFixed(2)}
                     </p>
                 </div>

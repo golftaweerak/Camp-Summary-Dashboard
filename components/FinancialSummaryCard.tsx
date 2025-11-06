@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ArrowDownIcon, ArrowUpIcon, WalletIcon } from './icons/Icons';
 import type { FinancialMetric } from '../types';
@@ -67,7 +66,7 @@ const FinancialSummaryCard: React.FC<FinancialSummaryCardProps> = ({ metrics, on
                     </div>
                     <div>
                         <span className="text-sm font-medium text-slate-500">รายรับ (จากมูลนิธิ)</span>
-                        <p className="text-3xl font-bold text-green-600">{totalIncome.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
+                        <p className="text-2xl sm:text-3xl font-bold text-green-600">{totalIncome.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
                         <span className="text-sm text-slate-500">บาท</span>
                     </div>
                 </div>
@@ -77,7 +76,7 @@ const FinancialSummaryCard: React.FC<FinancialSummaryCardProps> = ({ metrics, on
                     </div>
                     <div>
                         <span className="text-sm font-medium text-slate-500">รายจ่าย (รวม)</span>
-                        <p className="text-3xl font-bold text-red-600">{totalExpense.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
+                        <p className="text-2xl sm:text-3xl font-bold text-red-600">{totalExpense.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
                         <span className="text-sm text-slate-500">บาท</span>
                     </div>
                 </div>
@@ -87,7 +86,7 @@ const FinancialSummaryCard: React.FC<FinancialSummaryCardProps> = ({ metrics, on
                     </div>
                     <div>
                         <span className="text-sm font-medium text-slate-500">คงเหลือ</span>
-                        <p className={`text-3xl font-bold ${balance >= 0 ? 'text-blue-600' : 'text-red-600'}`}>{balance.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
+                        <p className={`text-2xl sm:text-3xl font-bold ${balance >= 0 ? 'text-blue-600' : 'text-red-600'}`}>{balance.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
                         <span className="text-sm text-slate-500">บาท</span>
                     </div>
                 </div>

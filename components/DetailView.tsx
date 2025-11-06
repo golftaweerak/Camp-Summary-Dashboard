@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import type { DashboardItem, FinancialMetric, Metric } from '../types';
 import { ArrowLeftIcon } from './icons/Icons';
@@ -36,7 +35,7 @@ const MetricList: React.FC<{ metrics: Metric[] }> = ({ metrics }) => {
                 const barWidth = (metric.score / 5) * 100;
                 const barColor = getScoreBarColor(metric.score);
                 return (
-                    <li key={index} className="flex flex-col sm:flex-row sm:items-center sm:justify-between py-3 px-4 transition-colors hover:bg-slate-50/50">
+                    <li key={index} className="flex flex-col sm:flex-row sm:items-center sm:justify-between py-3 px-2 sm:px-4 transition-colors hover:bg-slate-50/50">
                         <span className="text-slate-600 mb-1 sm:mb-0">{metric.name}</span>
                         <div className="flex items-center space-x-3 w-full sm:w-auto">
                             <span className="font-bold text-slate-800 text-lg w-12">{metric.score.toFixed(2)}</span>
@@ -168,7 +167,7 @@ const FinancialDetailList: React.FC<{ metrics: FinancialMetric[] }> = ({ metrics
         <div>
             <ul className="divide-y divide-slate-100">
                 {metrics.map((metric, index) => (
-                    <li key={index} className="flex flex-col sm:flex-row sm:items-center sm:justify-between py-3 px-4 transition-colors hover:bg-slate-50/50">
+                    <li key={index} className="flex flex-col sm:flex-row sm:items-center sm:justify-between py-3 px-2 sm:px-4 transition-colors hover:bg-slate-50/50">
                         <span className="text-slate-600 mb-1 sm:mb-0">{metric.name}</span>
                         <span className="font-bold text-slate-800 text-lg">
                             {metric.amount.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} บาท
@@ -214,7 +213,7 @@ const DetailView: React.FC<DetailViewProps> = ({ item, financialData, onBack }) 
                 {isFinancial && (
                      <div className="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden">
                         <div className="p-4 bg-slate-50 border-b border-slate-200">
-                           <h3 className="text-xl font-semibold text-slate-700">
+                           <h3 className="text-lg sm:text-xl font-semibold text-slate-700">
                                ภาพรวมสัดส่วนรายจ่าย
                            </h3>
                        </div>
@@ -226,7 +225,7 @@ const DetailView: React.FC<DetailViewProps> = ({ item, financialData, onBack }) 
 
                 <div className="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden">
                     <div className="p-4 bg-slate-50 border-b border-slate-200">
-                        <h3 className="text-xl font-semibold text-slate-700">
+                        <h3 className="text-lg sm:text-xl font-semibold text-slate-700">
                             {isFinancial ? 'รายละเอียดรายจ่าย' : `${dataItem?.title} (N=${dataItem?.n})`}
                         </h3>
                     </div>
