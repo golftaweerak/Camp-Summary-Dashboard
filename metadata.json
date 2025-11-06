@@ -1,0 +1,5 @@
+{
+  "name": "Camp Summary Dashboard",
+  "description": "A web application that displays a dashboard summarizing camp evaluation data, including overall scores, detailed metrics, financial summaries, and key feedback.",
+  "requestFramePermissions": []
+}
